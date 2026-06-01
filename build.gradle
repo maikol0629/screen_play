@@ -44,6 +44,5 @@ dependencies {
 }
 
 tasks.named('test') {
-    // System configs
-
+    systemProperties System.getProperties()
 }

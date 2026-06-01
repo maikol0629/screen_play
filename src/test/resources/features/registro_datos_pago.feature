@@ -1,3 +1,4 @@
+@Pago @Regresion
 Feature: Registro de Datos del Pasajero y Metodo de Pago
   Como viajero que ha seleccionado un vuelo
   Quiero proporcionar mis datos personales y de pago

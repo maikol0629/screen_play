@@ -1,3 +1,4 @@
+@Confirmacion @Regresion
 Feature: Confirmacion de la Reserva
   Como viajero que ha completado el proceso de compra
   Quiero recibir una confirmacion explicita de mi reserva con un identificador unico

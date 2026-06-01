@@ -1,3 +1,4 @@
+@Seleccion @Regresion
 Feature: Seleccion de un Vuelo de la Lista de Resultados
   Como viajero que ya consulto la disponibilidad
   Quiero elegir un vuelo especifico de la lista de resultados

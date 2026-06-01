@@ -1,3 +1,4 @@
+@Busqueda @Regresion
 Feature: Busqueda de Vuelos Disponibles
   Como viajero que desea planificar un trayecto
   Quiero consultar los vuelos disponibles entre dos ciudades
