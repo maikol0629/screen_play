@@ -1,5 +1,6 @@
 package com.calidad.blazedemo.stepdefinitions;
 
+import com.calidad.blazedemo.interactions.NavegarA;
 import com.calidad.blazedemo.models.DatosPago;
 import com.calidad.blazedemo.models.DatosPasajero;
 import com.calidad.blazedemo.questions.ElEstadoDeLaReserva;
@@ -13,7 +14,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -27,7 +27,7 @@ public class ConfirmacionReservaStepDefinitions {
                 "Massachusetts", "02101");
         DatosPago datosPago = new DatosPago("Visa", "4111111111111111", "12", "2028", "Juan Perez");
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Open.url("https://blazedemo.com/"),
+                NavegarA.a(""),
                 BuscarVuelos.desde("Boston", "New York"),
                 SeleccionarVuelo.primeroDisponible(),
                 RegistrarDatosYConfirmarPago.con(datosPasajero, datosPago)

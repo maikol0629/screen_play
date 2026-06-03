@@ -1,12 +1,12 @@
 package com.calidad.blazedemo.stepdefinitions;
 
+import com.calidad.blazedemo.interactions.NavegarA;
 import com.calidad.blazedemo.questions.ElMensajeDeLogueo;
 import com.calidad.blazedemo.tasks.IniciarSesion;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import org.hamcrest.Matchers;
 
@@ -18,7 +18,7 @@ public class InicioSesionStepDefinitions {
     @Given("que el usuario se encuentra en la pagina de login de blazedemo")
     public void queElUsuarioSeEncuentraEnLaPaginaDeLoginDeBlazedemo() {
         OnStage.theActorCalled("Usuario").wasAbleTo(
-                Open.url("https://blazedemo.com/login")
+                NavegarA.a("login")
         );
     }
 

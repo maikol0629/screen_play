@@ -1,5 +1,6 @@
 package com.calidad.blazedemo.stepdefinitions;
 
+import com.calidad.blazedemo.interactions.NavegarA;
 import com.calidad.blazedemo.questions.ElPrecioDelVuelo;
 import com.calidad.blazedemo.questions.LaAerolineaDelVuelo;
 import com.calidad.blazedemo.tasks.BuscarVuelos;
@@ -8,7 +9,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -19,7 +19,7 @@ public class SeleccionVueloStepDefinitions {
     @Given("que el viajero ha consultado la disponibilidad de vuelos y el sistema ha presentado los resultados")
     public void viajeroHaConsultadoDisponibilidad() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Open.url("https://blazedemo.com/"),
+                NavegarA.a(""),
                 BuscarVuelos.desde("Boston", "New York")
         );
     }

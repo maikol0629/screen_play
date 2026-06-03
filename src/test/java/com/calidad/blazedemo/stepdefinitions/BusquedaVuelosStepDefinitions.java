@@ -1,12 +1,12 @@
 package com.calidad.blazedemo.stepdefinitions;
 
 import com.calidad.blazedemo.questions.LosVuelosDisponibles;
+import com.calidad.blazedemo.interactions.NavegarA;
 import com.calidad.blazedemo.tasks.BuscarVuelos;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -17,7 +17,7 @@ public class BusquedaVuelosStepDefinitions {
     @Given("que el viajero se encuentra en el portal de la agencia de viajes")
     public void elViajeroEstaEnElPortal() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Open.url("https://blazedemo.com/")
+                NavegarA.a("")
         );
     }
 

@@ -4,6 +4,7 @@ import com.calidad.blazedemo.models.DatosPago;
 import com.calidad.blazedemo.models.DatosPasajero;
 import com.calidad.blazedemo.questions.ElEstadoDeLaReserva;
 import com.calidad.blazedemo.questions.ElNumeroDeOrden;
+import com.calidad.blazedemo.interactions.NavegarA;
 import com.calidad.blazedemo.tasks.BuscarVuelos;
 import com.calidad.blazedemo.tasks.RegistrarDatosYConfirmarPago;
 import com.calidad.blazedemo.tasks.SeleccionarVuelo;
@@ -13,7 +14,6 @@ import io.cucumber.java.en.But;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -27,7 +27,7 @@ public class RegistroPagoStepDefinitions {
     @Given("que el viajero ha seleccionado un vuelo y el sistema ha habilitado el formulario de reserva")
     public void viajeroHaSeleccionadoVuelo() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Open.url("https://blazedemo.com/"),
+                NavegarA.a(""),
                 BuscarVuelos.desde("Boston", "New York"),
                 SeleccionarVuelo.primeroDisponible()
         );
